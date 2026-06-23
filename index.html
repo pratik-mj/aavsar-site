@@ -1,21 +1,29 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AAVSAR | by Mangalkar Jewellers</title>
+  <title>AAVSAR | The Premium Gifting Store</title>
 
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <style>
+
     :root{
       --emerald:#0E4B43;
       --gold:#C8A66B;
       --ivory:#F7F4EE;
       --charcoal:#2D2D2D;
+      --light-gold:#E5D3AF;
     }
 
     *{
@@ -24,251 +32,488 @@
       box-sizing:border-box;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
-      background:
-      radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 40%),
-      linear-gradient(135deg,#062a25,#0E4B43);
-      color:var(--ivory);
+      background:var(--ivory);
+      color:var(--charcoal);
       font-family:'Inter',sans-serif;
-      min-height:100vh;
       overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
     }
 
     .container{
       width:100%;
-      max-width:1400px;
+      max-width:1280px;
       margin:auto;
-      padding:40px 30px;
+      padding:0 28px;
+    }
+
+    /* ========================= */
+    /* HEADER */
+    /* ========================= */
+
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:999;
+      background:rgba(247,244,238,0.95);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.08);
+      box-shadow:0 2px 12px rgba(0,0,0,0.04);
     }
 
     .navbar{
+      height:92px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      margin-bottom:80px;
+      justify-content:space-between;
     }
 
-    .brand-small{
-      font-size:14px;
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .brand-logo img{
+      height:60px;
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .brand-text h3{
+      font-family:'Cormorant Garamond',serif;
       letter-spacing:4px;
-      text-transform:uppercase;
-      opacity:0.8;
+      font-size:30px;
+      color:var(--emerald);
+      font-weight:700;
     }
 
-    .coming-badge{
-      border:1px solid rgba(200,166,107,0.4);
-      padding:10px 18px;
-      border-radius:50px;
-      color:var(--gold);
-      font-size:13px;
-      letter-spacing:2px;
+    .brand-text span{
+      font-size:11px;
+      letter-spacing:3px;
+      color:#777;
       text-transform:uppercase;
-      backdrop-filter:blur(8px);
     }
+
+    .nav-socials{
+      display:flex;
+      gap:12px;
+    }
+
+    .nav-socials a{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:1.5px solid rgba(0,0,0,0.10);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--emerald);
+      text-decoration:none;
+      transition:0.3s ease;
+      background:white;
+      box-shadow:0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .nav-socials a:hover{
+      background:var(--emerald);
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    /* ========================= */
+    /* HERO */
+    /* ========================= */
 
     .hero{
+      padding-top:180px;
+      padding-bottom:130px;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
+
+    .hero-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
+      gap:80px;
       align-items:center;
-      gap:60px;
-      min-height:70vh;
     }
 
-    .left-content{
-      animation:fadeUp 1s ease forwards;
-    }
-
-    .eyebrow{
+    .hero-label{
       color:var(--gold);
-      text-transform:uppercase;
       letter-spacing:4px;
-      margin-bottom:20px;
-      font-size:14px;
+      text-transform:uppercase;
+      font-size:13px;
+      margin-bottom:18px;
     }
 
-    h1{
-      font-family:'Cormorant Garamond', serif;
-      font-size:92px;
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:88px;
       line-height:0.95;
       font-weight:600;
-      margin-bottom:25px;
-      color:var(--ivory);
+      color:var(--emerald);
+      margin-bottom:28px;
     }
 
-    h1 span{
-      color:var(--gold);
-    }
-
-    .subtext{
-      max-width:620px;
+    .hero p{
       font-size:18px;
       line-height:1.9;
-      color:rgba(247,244,238,0.85);
-      margin-bottom:35px;
+      color:#555;
+      max-width:620px;
+      margin-bottom:40px;
     }
 
-    .tagline{
-      color:var(--gold);
-      font-size:22px;
-      margin-bottom:35px;
-      font-family:'Cormorant Garamond', serif;
-      letter-spacing:1px;
-    }
-
-    .offerings{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:45px;
-    }
-
-    .pill{
-      border:1px solid rgba(200,166,107,0.35);
-      padding:12px 18px;
-      border-radius:50px;
-      font-size:14px;
-      color:var(--ivory);
-      background:rgba(255,255,255,0.04);
-      backdrop-filter:blur(8px);
-    }
-
-    .socials{
+    .hero-buttons{
       display:flex;
       gap:16px;
-      margin-top:10px;
-    }
-
-    .socials a{
-      width:52px;
-      height:52px;
-      border-radius:50%;
-      border:1px solid rgba(200,166,107,0.35);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      color:var(--gold);
-      transition:0.3s ease;
-      font-size:18px;
-      background:rgba(255,255,255,0.03);
-    }
-
-    .socials a:hover{
-      transform:translateY(-4px);
-      background:rgba(200,166,107,0.12);
-      border-color:var(--gold);
-    }
-
-    .right-content{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      animation:fadeIn 1.2s ease forwards;
-    }
-
-    .logo-card{
-      width:100%;
-      max-width:620px;
-      padding:40px;
-      border-radius:32px;
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(14px);
-      box-shadow:
-      0 20px 60px rgba(0,0,0,0.35),
-      inset 0 0 0 1px rgba(255,255,255,0.03);
-    }
-
-    .logo-card img{
-      width:100%;
-      border-radius:18px;
-      display:block;
-    }
-
-    .footer{
-      margin-top:80px;
-      padding-top:30px;
-      border-top:1px solid rgba(255,255,255,0.08);
-      display:flex;
-      justify-content:space-between;
       flex-wrap:wrap;
-      gap:20px;
-      color:rgba(247,244,238,0.65);
+    }
+
+    .btn{
+      padding:16px 28px;
+      border-radius:100px;
+      text-decoration:none;
+      font-size:14px;
+      letter-spacing:1.2px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition:0.35s ease;
+      font-weight:600;
+    }
+
+    .btn-primary{
+      background:var(--emerald);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-4px);
+      background:#063f38;
+      box-shadow:0 12px 30px rgba(14,75,67,0.20);
+    }
+
+    .btn-secondary{
+      border:1.5px solid rgba(0,0,0,0.10);
+      color:var(--emerald);
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-4px);
+      border-color:var(--gold);
+      color:var(--gold);
+      box-shadow:0 12px 30px rgba(200,166,107,0.15);
+    }
+
+    .hero-logo-box{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .hero-logo-bg{
+      width:540px;
+      height:540px;
+      border-radius:50%;
+      background:
+      radial-gradient(circle,
+      rgba(200,166,107,0.18),
+      transparent 70%);
+      position:absolute;
+      z-index:1;
+    }
+
+    .main-logo{
+      position:relative;
+      z-index:2;
+      width:420px;
+    }
+
+    /* ========================= */
+    /* BRAND PHILOSOPHY */
+    /* ========================= */
+
+    .philosophy{
+      padding:140px 0;
+      text-align:center;
+      background:white;
+    }
+
+    .section-label{
+      color:var(--gold);
+      letter-spacing:4px;
+      text-transform:uppercase;
+      font-size:12px;
+      margin-bottom:18px;
+    }
+
+    .section-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:60px;
+      color:var(--emerald);
+      margin-bottom:25px;
+      line-height:1.1;
+    }
+
+    .section-text{
+      max-width:820px;
+      margin:auto;
+      line-height:1.9;
+      color:#666;
+      font-size:18px;
+    }
+
+    /* ========================= */
+    /* CATEGORIES */
+    /* ========================= */
+
+    .categories{
+      padding:140px 0;
+      background:#fcfaf6;
+    }
+
+    .cards-grid{
+      margin-top:60px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+    }
+
+    .category-card{
+      background:white;
+      border:1px solid rgba(0,0,0,0.07);
+      border-radius:30px;
+      padding:40px;
+      transition:0.35s ease;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .category-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(200,166,107,0.40);
+      box-shadow:0 20px 50px rgba(0,0,0,0.08);
+    }
+
+    .category-icon{
+      width:66px;
+      height:66px;
+      border-radius:20px;
+      background:rgba(14,75,67,0.10);
+      color:var(--emerald);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      margin-bottom:30px;
+    }
+
+    .category-card h3{
+      font-family:'Cormorant Garamond',serif;
+      font-size:34px;
+      color:var(--emerald);
+      margin-bottom:16px;
+    }
+
+    .category-card p{
+      line-height:1.8;
+      color:#666;
+      font-size:15px;
+    }
+
+    /* ========================= */
+    /* EXPERIENCE */
+    /* ========================= */
+
+    .experience{
+      padding:140px 0;
+      position:relative;
+      overflow:hidden;
+      background:
+      linear-gradient(rgba(14,75,67,0.90),
+      rgba(14,75,67,0.92)),
+      url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=2000&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      text-align:center;
+      color:white;
+    }
+
+    .experience .section-title{
+      color:white;
+    }
+
+    .experience .section-text{
+      color:rgba(255,255,255,0.82);
+    }
+
+    /* ========================= */
+    /* COMING SOON */
+    /* ========================= */
+
+    .coming-soon{
+      padding:140px 0;
+      text-align:center;
+    }
+
+    .coming-card{
+      background:white;
+      border:1px solid rgba(0,0,0,0.07);
+      border-radius:40px;
+      padding:75px 50px;
+      max-width:900px;
+      margin:auto;
+      box-shadow:0 10px 40px rgba(0,0,0,0.05);
+    }
+
+    .coming-card h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:62px;
+      color:var(--emerald);
+      margin-bottom:20px;
+    }
+
+    .coming-card p{
+      max-width:650px;
+      margin:auto;
+      line-height:1.9;
+      color:#666;
+      margin-bottom:35px;
+      font-size:17px;
+    }
+
+    .social-buttons{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .social-btn{
+      padding:16px 26px;
+      border-radius:100px;
+      background:#f8f8f8;
+      border:1px solid rgba(0,0,0,0.08);
+      text-decoration:none;
+      color:var(--emerald);
+      display:flex;
+      align-items:center;
+      gap:10px;
+      transition:0.35s ease;
+      font-size:14px;
+      font-weight:600;
+      box-shadow:0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .social-btn:hover{
+      background:var(--emerald);
+      color:white;
+      transform:translateY(-4px);
+      box-shadow:0 12px 28px rgba(14,75,67,0.18);
+    }
+
+    /* ========================= */
+    /* FOOTER */
+    /* ========================= */
+
+    footer{
+      padding:50px 0 70px;
+      text-align:center;
+      color:#888;
       font-size:14px;
     }
 
-    .footer span{
-      color:var(--gold);
+    footer img{
+      height:54px;
+      margin:auto;
+      margin-bottom:20px;
     }
 
-    @keyframes fadeUp{
-      from{
-        opacity:0;
-        transform:translateY(30px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
+    /* ========================= */
+    /* RESPONSIVE */
+    /* ========================= */
 
-    @keyframes fadeIn{
-      from{
-        opacity:0;
-        transform:scale(0.95);
-      }
-      to{
-        opacity:1;
-        transform:scale(1);
-      }
-    }
+    @media(max-width:1100px){
 
-    @media(max-width:980px){
-
-      .hero{
+      .hero-grid{
         grid-template-columns:1fr;
         text-align:center;
       }
 
-      .offerings{
+      .hero p{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-buttons{
         justify-content:center;
       }
 
-      .socials{
-        justify-content:center;
-      }
-
-      h1{
-        font-size:64px;
-      }
-
-      .subtext{
-        margin:auto;
-        margin-bottom:35px;
-      }
-
-      .footer{
-        text-align:center;
-        justify-content:center;
+      .cards-grid{
+        grid-template-columns:1fr 1fr;
       }
     }
 
-    @media(max-width:640px){
+    @media(max-width:768px){
 
-      h1{
-        font-size:48px;
+      .hero{
+        padding-top:140px;
       }
 
-      .container{
-        padding:25px 20px;
+      .hero h1{
+        font-size:58px;
+      }
+
+      .section-title{
+        font-size:44px;
+      }
+
+      .cards-grid{
+        grid-template-columns:1fr;
+      }
+
+      .main-logo{
+        width:300px;
+      }
+
+      .hero-logo-bg{
+        width:340px;
+        height:340px;
       }
 
       .navbar{
-        margin-bottom:50px;
+        flex-direction:column;
+        height:auto;
+        padding:18px 0;
+        gap:18px;
       }
 
-      .tagline{
-        font-size:20px;
+      .brand-text h3{
+        font-size:24px;
+      }
+
+      .coming-card h2{
+        font-size:48px;
       }
     }
 
@@ -277,96 +522,375 @@
 
 <body>
 
-  <div class="container">
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
 
-    <div class="navbar">
-      <div class="brand-small">
-        AAVSAR • by Mangalkar Jewellers
+  <header>
+
+    <div class="container">
+
+      <div class="navbar">
+
+        <div class="brand-logo">
+
+          <!-- FILE NAME -->
+          <img src="aavsar-wordmark.png" alt="AAVSAR">
+
+          <div class="brand-text">
+            <h3>AAVSAR</h3>
+            <span>by Mangalkar Jewellers</span>
+          </div>
+
+        </div>
+
+        <!-- EDIT SOCIAL LINKS HERE -->
+        <div class="nav-socials">
+
+          <a href="https://instagram.com/AAVSAR" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://facebook.com/AAVSAR" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://wa.me/919999999999" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="coming-badge">
-        Coming Soon
-      </div>
     </div>
 
-    <section class="hero">
+  </header>
 
-      <div class="left-content">
+  <!-- ========================= -->
+  <!-- HERO -->
+  <!-- ========================= -->
 
-        <div class="eyebrow">
-          Premium Gifts & Celebrations
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div>
+
+          <div class="hero-label">
+            Premium Gifts & Celebrations
+          </div>
+
+          <h1>
+            Celebrating
+            Life’s Meaningful Moments
+          </h1>
+
+          <p>
+            AAVSAR is a premium gifting destination by Mangalkar Jewellers,
+            bringing together curated silverware, elegant keepsakes,
+            festive collections, home décor, and thoughtful gifts designed
+            for every occasion worth celebrating.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#coming-soon" class="btn btn-primary">
+              <i class="fa-solid fa-gift"></i>
+              Opening Soon
+            </a>
+
+            <a href="https://instagram.com/YOURHANDLE"
+            target="_blank"
+            class="btn btn-secondary">
+
+              <i class="fab fa-instagram"></i>
+              Follow Our Journey
+
+            </a>
+
+          </div>
+
         </div>
 
-        <h1>
-          For Every <span>Occasion</span>
-        </h1>
+        <div class="hero-logo-box">
 
-        <div class="tagline">
-          Every Occasion Deserves Something Memorable.
+          <div class="hero-logo-bg"></div>
+
+          <!-- FILE NAME -->
+          <img src="aavsar-monogram.png"
+          class="main-logo"
+          alt="AAVSAR Logo">
+
         </div>
 
-        <p class="subtext">
-          AAVSAR is a premium gifting destination by Mangalkar Jewellers,
-          bringing together elegant silverware, curated gifts, home décor,
-          festive collections, spiritual gifting, and celebration essentials
-          designed to make every special moment unforgettable.
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- PHILOSOPHY -->
+  <!-- ========================= -->
+
+  <section class="philosophy">
+
+    <div class="container">
+
+      <div class="section-label">
+        Our Philosophy
+      </div>
+
+      <h2 class="section-title">
+        Every Occasion Deserves
+        Something Memorable
+      </h2>
+
+      <p class="section-text">
+        From weddings and festivals to baby celebrations,
+        anniversaries, housewarmings, and meaningful milestones,
+        AAVSAR is built around the joy of thoughtful gifting
+        and beautiful moments shared with loved ones.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- CATEGORIES -->
+  <!-- ========================= -->
+
+  <section class="categories">
+
+    <div class="container">
+
+      <div class="section-label">
+        Curated Collections
+      </div>
+
+      <h2 class="section-title">
+        Crafted For Every Celebration
+      </h2>
+
+      <div class="cards-grid">
+
+        <!-- EDIT CARDS HERE -->
+
+        <div class="category-card">
+
+          <div class="category-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+
+          <h3>AAVSAR Silver</h3>
+
+          <p>
+            Premium silver gifts, coins, keepsakes,
+            decorative articles, and timeless gifting pieces.
+          </p>
+
+        </div>
+
+        <div class="category-card">
+
+          <div class="category-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+
+          <h3>AAVSAR Home</h3>
+
+          <p>
+            Elegant décor, utility gifts, trays,
+            showpieces, and premium home accents.
+          </p>
+
+        </div>
+
+        <div class="category-card">
+
+          <div class="category-icon">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+
+          <h3>AAVSAR Celebration</h3>
+
+          <p>
+            Wedding gifting, anniversary collections,
+            festive gifting, and memorable celebrations.
+          </p>
+
+        </div>
+
+        <div class="category-card">
+
+          <div class="category-icon">
+            <i class="fa-solid fa-baby"></i>
+          </div>
+
+          <h3>AAVSAR Baby</h3>
+
+          <p>
+            Naming ceremony gifts, keepsakes,
+            silver baby collections, and meaningful memories.
+          </p>
+
+        </div>
+
+        <div class="category-card">
+
+          <div class="category-icon">
+            <i class="fa-solid fa-dharmachakra"></i>
+          </div>
+
+          <h3>AAVSAR Divine</h3>
+
+          <p>
+            Spiritual gifting, pooja accessories,
+            idols, diyas, and devotional collections.
+          </p>
+
+        </div>
+
+        <div class="category-card">
+
+          <div class="category-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <h3>AAVSAR Corporate</h3>
+
+          <p>
+            Employee gifting, festive hampers,
+            corporate celebrations, and premium business gifting.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- EXPERIENCE -->
+  <!-- ========================= -->
+
+  <section class="experience">
+
+    <div class="container">
+
+      <div class="section-label">
+        The Experience
+      </div>
+
+      <h2 class="section-title">
+        More Than A Store
+      </h2>
+
+      <p class="section-text">
+        AAVSAR is designed to be a warm and elegant gifting destination
+        where every visit feels personal, thoughtful, and celebratory 
+        a place where meaningful gifts become lasting memories.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- COMING SOON -->
+  <!-- ========================= -->
+
+  <section class="coming-soon" id="coming-soon">
+
+    <div class="container">
+
+      <div class="coming-card">
+
+        <div class="section-label">
+          Launching Soon
+        </div>
+
+        <h2>
+          The Premium Gifting Store
+        </h2>
+
+        <p>
+          Our first AAVSAR store is arriving soon.
+          Follow our journey for launch updates,
+          upcoming collections, festive gifting ideas,
+          and celebration inspirations.
         </p>
 
-        <div class="offerings">
-          <div class="pill">Silver Gifts</div>
-          <div class="pill">Wedding Collections</div>
-          <div class="pill">Festive Hampers</div>
-          <div class="pill">Home Décor</div>
-          <div class="pill">Baby Gifts</div>
-          <div class="pill">Corporate Gifting</div>
-          <div class="pill">Divine Collection</div>
+        <!-- EDIT SOCIAL LINKS HERE -->
+
+        <div class="social-buttons">
+
+          <a href="https://instagram.com/AAVSARBYMJ"
+          target="_blank"
+          class="social-btn">
+
+            <i class="fab fa-instagram"></i>
+            Instagram
+
+          </a>
+
+          <a href="https://facebook.com/AAVSARBYMJ"
+          target="_blank"
+          class="social-btn">
+
+            <i class="fab fa-facebook-f"></i>
+            Facebook
+
+          </a>
+
+          <a href="https://wa.me/919999999999"
+          target="_blank"
+          class="social-btn">
+
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+
+          </a>
+
         </div>
 
-        <div class="socials">
-
-          <a href="#" aria-label="Instagram">
-            ⌁
-          </a>
-
-          <a href="#" aria-label="Facebook">
-            ✦
-          </a>
-
-          <a href="#" aria-label="Pinterest">
-            ❖
-          </a>
-
-          <a href="#" aria-label="WhatsApp">
-            ✧
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="right-content">
-
-        <div class="logo-card">
-          <img src="logo.png" alt="AAVSAR Logo">
-        </div>
-
-      </div>
-
-    </section>
-
-    <div class="footer">
-
-      <div>
-        © 2026 <span>AAVSAR</span> by Mangalkar Jewellers
-      </div>
-
-      <div>
-        Launching Soon • Nagpur, India
       </div>
 
     </div>
 
-  </div>
+  </section>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <!-- FILE NAME -->
+      <img src="aavsar-wordmark.png" alt="AAVSAR">
+
+      <p>
+        © 2026 AAVSAR by Mangalkar Jewellers
+      </p>
+
+      <br>
+
+      <p>
+        Nagpur, India
+      </p>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
+```
